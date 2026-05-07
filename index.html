@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student CGPA Calculator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Student CGPA Calculator</h1>
+
+        <form method="POST">
+
+    <input type="number"
+           step="0.01"
+           name="sem1"
+           placeholder="Semester 1 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem2"
+           placeholder="Semester 2 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem3"
+           placeholder="Semester 3 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem4"
+           placeholder="Semester 4 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem5"
+           placeholder="Semester 5 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem6"
+           placeholder="Semester 6 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem7"
+           placeholder="Semester 7 SGPA"
+           required>
+
+    <input type="number"
+           step="0.01"
+           name="sem8"
+           placeholder="Semester 8 SGPA"
+           required>
+
+    <button type="submit">
+        Calculate CGPA
+    </button>
+
+</form>    
+
+            {% if cgpa is not none %}
+
+            <div class="result">
+
+                Your CGPA : {{ cgpa }}
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
